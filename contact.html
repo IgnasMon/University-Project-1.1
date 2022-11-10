@@ -30,7 +30,7 @@
             href="https://fonts.googleapis.com/css2?family=Notable&display=swap" 
         />
     </head>
-    <body>
+    <body id="flexContainer">
 
         <!-- Header and Navigation -->
         <header id="mainHeader">
@@ -67,62 +67,98 @@
         </header>
             
         <!-- Website Content Section -->
-        <section id="mainContent">
+        <section id="mainGridContent">
 
-            <!-- Form Section -->
-            <form method="post" 
-                action=""
-                >
-                <label>Contact form</label>
+            <!-- Contacts and Form Section -->
+            <section id="contactForm">
+                <section>
+                    <h1>Contact Information</h1>
+                    <p>Website Title</p>
+                    <p>Ignas Montvydas</p>
+                    <p>Address</p>
+                    <p>+31 (0) xx xxx xxxx</p>
+                </section>
+                <form>
+                    <h1>Contact form</h1>
+    
+                    <!-- Name and Email -->
+                    <fieldset>
+                        <legend>Visitor Details</legend>
+                        <fieldset>
+                            <label for="name">
+                                <strong>Name
+                                    <span class="requiredField">*</span>
+                                </strong>
+                            </label>
+                            <input type="text" name="name" placeholder="Name Lastname" required/>
+                        </fieldset>
+                        <fieldset>
+                            <label for="email">
+                                <strong>Email
+                                    <span class="requiredField">*</span>
+                                </strong>
+                            </label>
+                            <input type="email" name="email" placeholder="email@email.com" required>
+                        </fieldset>
+                    </fieldset>
+    
+                    <!-- Message -->
+                    <fieldset>
+                        <legend>Ask a Question</legend>
+                        <label for="message">
+                            <strong>Message
+                                <span class="requiredField">*</span>
+                            </strong>
+                        </label>
+                        <textarea name="message" rows="5" cols="20" required>
+                        </textarea>
+                    </fieldset>
+                    
+                    <input id="buttonSubmit" type="submit" value="Submit">
+                </form>
+            </section>
 
-                <!-- Name and Email -->
-                <fieldset>
-                    <legend>Visitor Details</legend>
-                    <label>First Name
-                        <span>*</span>
-                    </label>
-                    <input type="text" name="firstName" placeholder="Firstname" required>
-                    <label>Last Name
-                        <span>
-                            *
-                        </span>
-                    </label>
-                    <input type="text" name="lastName" placeholder="Lastname" required>
-                    <label>Email
-                        <span>
-                            *
-                        </span>
-                    </label>
-                    <input type="email" name="email" placeholder="email@email.com" required>
-                
-                </fieldset>
-
-                <!-- Message -->
-                <fieldset>
-                    <legend>Ask a Question</legend>
-                    <label>Message
-                        <span>
-                            *
-                        </span>
-                    </label>
-                    <textarea name="message" required>
-                    </textarea>
-                </fieldset>
-                
-                <input type="submit" value="submit">
-            </form>
-
-            <!-- Aside Section -->
-            <aside>
-                <a href="https://www.inholland.nl/">
-                    <img src="./img/placeholder/placeholder-image.jpg">
-                </a>
-                <a href="https://www.inholland.nl/">
-                    <img src="./img/placeholder/placeholder-image.jpg">
-                </a>
-                <a href="https://www.inholland.nl/">
-                    <img src="./img/placeholder/placeholder-image.jpg">
-                </a>
+            <!-- Aside Trends Section -->
+            <aside id="asideTop3Products">
+                <h1>
+                    Top 3 products
+                </h1>
+                <figure id="asideProduct1">
+                    <a href="#">
+                        <img src="./img/placeholder/placeholder-image.jpg">
+                    </a>
+                    <figcaption>
+                        <em>
+                            <!-- DON'T FORGET TO DELETE THE HYPERLINK TO PLACEHOLDER -->
+                            <a href="https://businessreflex.se/portfolio-items/go-market-guide-start-ups/clouds-500x500/">Placeholder image origin</a>
+                            <!-- DON'T FORGET TO DELETE THE HYPERLINK TO PLACEHOLDER -->
+                        </em>
+                    </figcaption>
+                </figure>
+                <figure id="asideProduct2">
+                    <a href="#">
+                        <img src="./img/placeholder/placeholder-image.jpg">
+                    </a>
+                    <figcaption>
+                        <em>
+                            <!-- DON'T FORGET TO DELETE THE HYPERLINK TO PLACEHOLDER -->
+                            <a href="https://businessreflex.se/portfolio-items/go-market-guide-start-ups/clouds-500x500/">Placeholder image origin</a>
+                            <!-- DON'T FORGET TO DELETE THE HYPERLINK TO PLACEHOLDER -->
+                        </em>
+                    </figcaption>
+                </figure>
+                <figure id="asideProduct3">
+                    <a href="#">
+                        <img src="./img/placeholder/placeholder-image.jpg">
+                    </a>
+                    <figcaption>
+                        <em>
+                            <!-- DON'T FORGET TO DELETE THE HYPERLINK TO PLACEHOLDER -->
+                            <a href="https://businessreflex.se/portfolio-items/go-market-guide-start-ups/clouds-500x500/">Placeholder image origin</a>
+                            <!-- DON'T FORGET TO DELETE THE HYPERLINK TO PLACEHOLDER -->
+                        </em>
+                    </figcaption>
+                </figure>
             </aside>
         </section>
 

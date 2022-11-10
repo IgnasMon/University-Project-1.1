@@ -6,6 +6,8 @@
     margin: 0;
     padding: 0;
     border: 0;
+    top: 0;
+    left: 0;
 }
 
 /* CSS for body */
@@ -24,6 +26,7 @@ body{
     padding: 20px;
 }
 #websiteLogo{
+    position: absolute;
     width: 120px;
     height: auto;
 }
@@ -83,6 +86,8 @@ a:active{
 }
 #cookies{
     position: fixed;
+    top: auto;
+    left: auto;
     bottom: 0;
     right: 0;
     padding: 20px;
@@ -193,6 +198,11 @@ a:active{
     padding: 20px;
     border: 2px double #000000;
 }
+#innovationArticles article p::first-letter{
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
 #productArticle1{
     grid-area: article1;
     background-color: #fff2cc;
@@ -252,12 +262,11 @@ a:active{
     display: grid;
     grid-template-columns: auto 35% 20%;
     grid-template-areas: 
-    "tableContent tableContent aside";
-    grid-gap: 10px;
+    "pageContent pageContent aside";
 }
 /* Pricing Table */
 #tableContent{
-    grid-area: tableContent;
+    grid-area: pageContent;
     padding: 20px;
     background-color: #bdd7ee;
 }
@@ -271,16 +280,78 @@ a:active{
     background-color: #FFF;
 }
 
-
-
-/* Aside */
-#asidePricing figure{
+/* Contact page content */
+/* Contact main content */
+#contactForm{
+    grid-area: pageContent;
+    padding: 20px;
+    background-color: #cecece;
+}
+#contactForm > section, #contactForm > form{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 8px double #000000;
+    border-radius: 10px;
+}
+#contactForm > section > h1, #contactForm > form > h1{
+    font-size: x-large;
+}
+#contactForm > section > p{
+    padding-top: 16px;
+}
+#contactForm > section > p:last-child{
+    text-transform: uppercase;
+}
+#contactForm > form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+#contactForm > form > fieldset{
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px dashed #000000;
+    border-radius: 10px;
+}
+#contactForm input, textarea{
+    align-self: center;
+    margin-left: 30px;
+    padding: 16px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+#contactForm > form > fieldset > fieldset{
+    padding: 8px 0;
+}
+.requiredField{
+    color: rgb(255, 0, 0);
+}
+#buttonSubmit{
+    width: 20em;
+    margin: 10px 10px 20px 10px;
     padding: 10px;
+    background-color: #295197;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+/* Aside "TOP3 Products" for Pricing and Contact page */
+/* Aside */
+#asideTop3Products{
+    background-color: #aeaaaa;
+    grid-area: aside;
+    padding: 10px;
+}
+#asideTop3Products figure{
+    padding: 10px;
+    margin-top: 16px;
     border: 2px double #000000;
 }
-#asidePricing{
-    grid-area: aside;
-}
-#asidePricing img{
+#asideTop3Products img{
     width: 200px;
 }
