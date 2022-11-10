@@ -12,10 +12,6 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
-#flexContainer{
-    display: flex;
-    flex-direction: column;
-}
 
 /* Header and Navigation */
 #mainHeader{
@@ -39,7 +35,6 @@ body{
     letter-spacing: 4px;
 } 
 #websiteHeader h2{
-    
     font-size: 28px;
     letter-spacing: 8px;
 }
@@ -69,22 +64,36 @@ body{
 }
 
 /* Footer and Cookies */
-#mainFooter{
+#mainFooter, #mainGridFooter{
     padding: 20px;
     background-color: #d6dce4;
+}
+#mainGridFooter{
+    display: grid;
+    grid-template-columns: auto 35% 20%;
+    grid-template-areas: 
+        "copyright copyright";
+}
+#copyrightWebsite{
+    grid-area: copyright;
 }
 #cookies{
     position: fixed;
     bottom: 0;
     right: 0;
     padding: 20px;
+    width: 18%;
     color: #FFF;
     background-color: #ffaa0080;
     z-index: 9999;
 }
 
-/* Index Page Content */
-#mainContent{
+/* Index page content */
+#flexContainer{
+    display: flex;
+    flex-direction: column;
+}
+#mainFlexContent{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -92,7 +101,7 @@ body{
     margin-left: 10%;
     margin-right: 10%;
 }
-
+/* Video */
 #promotionalVideo{
     flex: 100%;
     display: flex;
@@ -105,7 +114,7 @@ body{
 #promotionalVideo video{
     width: 800px;
 }
-
+/* Articles */
 #contentArticles{
     flex: 20%;
     display: flex;
@@ -129,19 +138,19 @@ body{
 #contentArticles img{
     height: 200px;
 }
-#articleSports{
+#contentArticles article{
     border-width: 10px;
     border-style: double;
     border-color: #000000;
     background-color: #e2efda;
 }
-#articleSports:nth-child(even){
+#contentArticles article:nth-child(even){
     background-color: #c6e0b4;
 }
-#articleSports p{
+#contentArticles article p{
     word-spacing: 4px;
 }
-
+/* Aside */
 #asideTrends{
     flex: 300px;
     flex-grow: 0;
@@ -158,4 +167,78 @@ body{
 .trendsItem{
     padding: 5px;
     line-height: 30px;
+}
+
+/* Product page content */
+/* Product Main Content */
+#innovationArticles{
+    display: grid;
+    grid-template-columns: auto 35% 20%;
+    grid-template-areas: 
+        "article2 article1 article3"
+        "article2 article1 article3"
+        "article5 article1 article3"
+        "article5 article1 article4"
+        "article5 article1 article4"
+        "article5 article1 article4"
+        "article5 article6 article6"
+        ;
+    grid-gap: 10px;
+}
+#innovationArticles article{
+    padding: 20px;
+    border: 2px double #000000;
+}
+#productArticle1{
+    grid-area: article1;
+    background-color: #fff2cc;
+}
+#productArticle2{
+    grid-area: article2;
+    background-color: #e2efda;
+}
+#productArticle3{
+    grid-area: article3;
+    background-color: #acb9ca;
+}
+#productArticle4{
+    grid-area: article4;
+    background-color: #c6e0b4;
+}
+#productArticle5{
+    grid-area: article5;
+    background-color: #ddebf7;
+}
+#productArticle6{
+    grid-area: article6;
+    background-color: #fce4d6;
+}
+
+/* Aside */
+#asideProducts{
+    display: grid;
+    grid-template-columns: auto 35% 20%;
+    grid-template-areas: 
+        "asideHeader asideHeader asideHeader"
+        "product1 product2 product3";
+    grid-gap: 10px;
+}
+#asideProducts figure{
+    padding: 10px;
+    border: 2px double #000000;
+}
+#asideProduct1{
+    grid-area: product1;
+    background-color: #d0cece;
+}
+#asideProduct2{
+    grid-area: product2;
+    background-color: #aeaaaa;
+}
+#asideProduct3{
+    grid-area: product3;
+    background-color: #757171;
+}
+#asideProducts img{
+    width: 200px;
 }
