@@ -17,37 +17,57 @@
             type="text/css"
             href="css/style.css"
         />
+        
+        <!-- Using Google Fonts API for Notable font style -->
+        <link rel="preconnect" 
+            href="https://fonts.googleapis.com"
+        />
+        <link rel="preconnect" 
+            href="https://fonts.gstatic.com" 
+            crossorigin
+        />
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Notable&display=swap" 
+        />
     </head>
     <body>
+
         <!-- Header and Navigation -->
-        <header>
-            <img src="./img/placeholder/placeholder-logo.png" title="Logo" alt="Logo">
+        <header id="mainHeader">
             
-            <!-- DON'T FORGET TO DELETE THE HYPERLINK TO PLACEHOLDER -->
-            <a href="https://clipground.com/placeholder-logo.html">Placeholder logo origin</a>
-            <!-- DON'T FORGET TO DELETE THE HYPERLINK TO PLACEHOLDER -->
-
-            <h1>Title</h1>
-            <h2>Payoff</h2>
-
+            <!-- Website Header -->
+            <header id="websiteHeader">
+                <img id="websiteLogo" 
+                    src="./img/placeholder/placeholder-logo.png" 
+                    title="Logo" alt="Logo"
+                />
+                
+                <!-- DON'T FORGET TO DELETE THE HYPERLINK TO PLACEHOLDER -->
+                <a href="https://clipground.com/placeholder-logo.html">Placeholder logo origin</a>
+                <!-- DON'T FORGET TO DELETE THE HYPERLINK TO PLACEHOLDER -->
+                
+                <h1>Contact Page</h1>
+                <h2>Payoff</h2>
+            </header>
+            
             <!-- Navigation -->
-            <nav>
+            <nav id="navbar">
                 <ul>
-                    <li>
+                    <li class="navbarItem">
                         <a href="./index.html">Home</a>
                     </li>
-                    <li>
+                    <li class="navbarItem">
                         <a href="./product.html">Products</a>
                     </li>
-                    <li>
-                        <a href="./contact.html">Contacts</a>
+                    <li class="navbarItem">
+                        <a href="./pricing.html">Pricing</a>
                     </li>
                 </ul>
             </nav>
         </header>
-
+            
         <!-- Website Content Section -->
-        <section>
+        <section id="mainContent">
 
             <!-- Form Section -->
             <form method="post" 
@@ -107,13 +127,17 @@
         </section>
 
         <!-- Website footer and Cookies -->
-        <footer>
-            <p>&#169; 2022 Ignas Montvydas</p>
-            <section>
+        <footer id="mainFooter">
+            <section id="copyrightWebsite">
+                <p>
+                    &#169; Copyright 2022 Ignas Montvydas
+                </p>
+            </section>
+            <section id="cookies">
                 <p>
                     Cookie statement
                 </p>
             </section>
-        </footer> 
+        </footer>
     </body>
 </html>

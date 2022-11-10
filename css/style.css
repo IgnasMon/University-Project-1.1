@@ -1,1 +1,78 @@
-/* CSS page for the website */
+/* CSS file for the website */
+
+/* CSS that applies to all pages */
+/* Normalization */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* CSS for body */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header and Navigation */
+#mainHeader{
+    background-color: #aeaaaa;
+}
+#websiteHeader{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+#websiteLogo{
+    width: 120px;
+    height: auto;
+}
+#websiteHeader h1,h2{
+    font-family: 'Notable', sans-serif;
+}
+#websiteHeader h1{
+    font-size: 40px;
+    letter-spacing: 4px;
+} 
+#websiteHeader h2{
+    
+    font-size: 28px;
+    letter-spacing: 8px;
+}
+#navbar{
+    position: sticky;
+    top: 0;
+    width: auto;
+    padding: 20px;
+    background-color: #19315b;
+}
+#navbar ul{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.navbarItem{
+    list-style-type: none;
+}
+.navbarItem a{
+    padding: 20px 16px;
+    color: #FFF;
+    text-decoration: none;
+}
+.navbarItem a:hover{
+    background-color: #295197;
+}
+
+/* Footer and Cookies */
+#mainFooter{
+    padding: 20px;
+    background-color: #d6dce4;
+}
+#cookies{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+    color: #FFF;
+    background-color: #ffaa0080;
+}
