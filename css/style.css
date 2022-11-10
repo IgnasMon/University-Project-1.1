@@ -62,6 +62,10 @@ body{
 .navbarItem a:hover{
     background-color: #295197;
 }
+a:active{
+    color: red;
+   text-decoration: underline; 
+}
 
 /* Footer and Cookies */
 #mainFooter, #mainGridFooter{
@@ -240,5 +244,43 @@ body{
     background-color: #757171;
 }
 #asideProducts img{
+    width: 200px;
+}
+
+/* Pricing page content */
+#mainGridContent{
+    display: grid;
+    grid-template-columns: auto 35% 20%;
+    grid-template-areas: 
+    "tableContent tableContent aside";
+    grid-gap: 10px;
+}
+/* Pricing Table */
+#tableContent{
+    grid-area: tableContent;
+    padding: 20px;
+    background-color: #bdd7ee;
+}
+#tableContent tr td:first-child{
+    background-color: #FF0;
+}
+#tableContent tr:nth-child(even){
+    background-color: #CFF;
+}
+#tableContent tr:nth-child(odd){
+    background-color: #FFF;
+}
+
+
+
+/* Aside */
+#asidePricing figure{
+    padding: 10px;
+    border: 2px double #000000;
+}
+#asidePricing{
+    grid-area: aside;
+}
+#asidePricing img{
     width: 200px;
 }
