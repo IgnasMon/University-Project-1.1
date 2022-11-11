@@ -17,7 +17,7 @@ body{
 
 /* Header and Navigation */
 #mainHeader{
-    background-color: #aeaaaa;
+    background-color: #42616f;
 }
 #websiteHeader{
     display: flex;
@@ -26,11 +26,12 @@ body{
     padding: 20px;
 }
 #websiteLogo{
-    width: 120px;
+    width: 180px;
     height: auto;
 }
 #websiteHeader h1,h2{
     font-family: 'Notable', sans-serif;
+    color: #ffffff;
 }
 #websiteHeader h1{
     font-size: 40px;
@@ -133,11 +134,11 @@ body{
     text-transform: uppercase;
 }
 .articleSports figure{
-    clear: both;
+    float: none;
     float: right;
 }
 .articleSports img{
-    height: 200px;
+    height: 180px;
 }
 .articleSports p{
     word-spacing: 4px;
@@ -195,10 +196,22 @@ body{
     border-style: double;
     border-color: #000000;
 }
-#articleSports p::first-letter{
-    font-size: 30px;
+.productArticle h1{
+    font-size: larger;
+}
+.productArticle p{
+    margin-top: 10px;
+}
+.productArticle footer{
+    margin-top:16px;
+}
+.articleSports p{
+    padding: 5px;
+}
+.articleSports p::first-letter{
+    font-size: 18px;
     font-weight: 400;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 #productArticle1{
     grid-area: article1;
@@ -225,19 +238,43 @@ body{
     background-color: #fce4d6;
 }
 
+
 /* Pricing page content */
 #tableContent, #visitorForm{
     grid-area: pageContent;
     padding: 20px;
     background-color: #bdd7ee;
 }
+#articleInnovation{
+    display: flex;
+    flex-wrap: wrap;
+}
 #articleInnovation, #websiteContacts{
     grid-area: topContent;
-    padding: 20px;
     background-color: #fff2cc;
 }
 
 /* Pricing Table */
+#tableContent table, th, td{
+    border: 2px solid rgb(0, 0, 0);
+    border-collapse: collapse; 
+}
+#tableContent td,th{
+    padding: 10px;
+    font-size: small;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+#tableContent th{
+    background-color: #ceffab;
+}
+#tableContent th::first-letter{
+    text-decoration: underline;
+    font-size: larger;
+}
+#tableContent tr + td{
+    color: blue;
+}
 #tableContent tr td:first-child{
     background-color: #FF0;
 }
@@ -246,6 +283,30 @@ body{
 }
 #tableContent tr:nth-child(odd){
     background-color: #FFF;
+}
+
+#tableContent section{
+    margin-top: 20px;
+    padding: 3rem;
+    background-color: #b3fdc5;
+    border: 2px solid rgb(0, 0, 0);
+}
+#tableContent section + li{
+    background-color: #bed1f2;
+}
+#tableContent section ul{
+    list-style-type: circle;
+}
+.sourceLink{
+    padding: 1em;
+    font-size: large;
+    letter-spacing: 2px;
+}
+.sourceLink:visited{
+    color: rgb(191, 0, 191);
+}
+.sourceLink:hover{
+    font-size: larger;
 }
 
 /* Contact page content */
