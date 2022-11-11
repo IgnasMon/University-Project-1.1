@@ -439,7 +439,9 @@ body{
 #asideProducts img, #asidePricing img, #asideContact img{
     width: 200px;
 }
-
+.hidden{
+    display: none;
+}
 /* Responsive Tablet */
 @media (min-width: 720px) and (max-width: 1200px){
     #navbarMobile{
