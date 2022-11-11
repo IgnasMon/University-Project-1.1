@@ -50,16 +50,36 @@
                 <h2>Payoff</h2>
             </header>
             
-            <!-- Navigation -->
-            <nav id="navbar">
-                <ul>
-                    <li class="navbarItem">
+             <!-- Navigation -->
+            <nav id="navbarDesktop" class="hidden">
+                <ul class="navList">
+                    <li class="navbarDesktopItem">
                         <a href="./index.html">Home</a>
                     </li>
-                    <li class="navbarItem">
-                        <a href="./product.html">Products</a>
+                    <li class="navbarDesktopItem">
+                        <a href="./product.html">Product</a>
                     </li>
-                    <li class="navbarItem">
+                    <li class="navbarDesktopItem">
+                        <a href="./contact.html">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+            <nav id="navbarMobile">
+                <label id="hamburger" for="navMenuButton">
+                    <span class="hamburgerIcon"></span>
+                </label>
+                <input id="navMenuButton" 
+                    class="navMenuButton"
+                    type="checkbox"
+                    />
+                <ul class="navList">
+                    <li class="navbarMobileItem">
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li class="navbarMobileItem">
+                        <a href="./product.html">Product</a>
+                    </li>
+                    <li class="navbarMobileItem">
                         <a href="./contact.html">Contacts</a>
                     </li>
                 </ul>
@@ -115,7 +135,7 @@
             </section>  
 
             <!-- Aside Section -->
-            <aside id="asidePricing">
+            <aside id="asideTop3Products">
                 <h1>
                     Top 3 products
                 </h1>
