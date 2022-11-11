@@ -26,7 +26,6 @@ body{
     padding: 20px;
 }
 #websiteLogo{
-    position: absolute;
     width: 120px;
     height: auto;
 }
@@ -226,18 +225,137 @@ body{
     background-color: #fce4d6;
 }
 
-/* Aside */
-#asideProducts{
+/* Pricing page content */
+#tableContent, #visitorForm{
+    grid-area: pageContent;
+    padding: 20px;
+    background-color: #bdd7ee;
+}
+#articleInnovation, #websiteContacts{
+    grid-area: topContent;
+    padding: 20px;
+    background-color: #fff2cc;
+}
+
+/* Pricing Table */
+#tableContent tr td:first-child{
+    background-color: #FF0;
+}
+#tableContent tr:nth-child(even){
+    background-color: #CFF;
+}
+#tableContent tr:nth-child(odd){
+    background-color: #FFF;
+}
+
+/* Contact page content */
+#visitorForm, #websiteContacts{
+    padding: 20px;
+}
+#websiteContacts{
+    padding-left: 15em;
+}
+#websiteContacts p{
+    line-height: 30px;
+}
+#websiteContacts h1{
+    font-size: x-large;
+}
+#visitorForm > section > h1, #visitorForm > form > h1{
+    font-size: x-large;
+}
+#visitorForm > section > p{
+    padding-top: 16px;
+}
+#visitorForm > section > p:last-child{
+    text-transform: uppercase;
+}
+#visitorForm > form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 20px;
+    border: 8px double #000000;
+    background-color: #d0cece;
+    border-radius: 10px;
+}
+#visitorForm > form > fieldset{
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px dashed #000000;
+    border-radius: 10px;
+}
+#visitorForm input, textarea{
+    align-self: center;
+    margin-left: 30px;
+    padding: 16px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+#visitorForm > form > fieldset > fieldset{
+    padding: 8px 0;
+}
+.requiredField{
+    color: rgb(255, 0, 0);
+}
+#buttonSubmit{
+    width: 20em;
+    margin: 10px 10px 20px 10px;
+    padding: 10px;
+    background-color: #295197;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+/* Grid for Product, Pricing and Contact page */
+#mainGridContent{
     display: grid;
     grid-template-columns: auto 35% 20%;
     grid-template-areas: 
-        "asideHeader asideHeader asideHeader"
-        "product1 product2 product3";
+        "topContent topContent topContent"
+        "pageContent pageContent aside"
+        ;
+}
+#mainGridPricing, #mainGridContacts{
+    display: grid;
+    grid-template-columns: auto 35% 20%;
+    grid-template-areas: 
+        "topContent topContent topContent"
+        "pageContent pageContent aside"
+        ;
+}
+
+/* Aside */
+#asideProducts, #asidePricing, #asideContact{
+    display: grid;
     grid-gap: 10px;
+}
+#asideProducts{
+    grid-template-columns: auto 35% 20%;
+    grid-template-areas: 
+        "asideHeader asideHeader asideHeader"
+        "product1 product2 product3"
+        ;
+}
+#asidePricing, #asideContact{
+    grid-template-columns: auto;
+    grid-template-areas: 
+        "asideHeader"
+        "product1"
+        "product2"
+        "product3"
+        ;
+}
+#asideProducts, #asidePricing, #asideContact{
     background-color: #ff9d9d;
     padding: 10px;
 }
-#asideProducts figure{
+#asideProducts figure, #asidePricing figure, #asideContact figure{
     padding: 10px;
     border: 2px double #000000;
 }
@@ -253,110 +371,11 @@ body{
     grid-area: product3;
     background-color: #757171;
 }
-#asideProducts img{
+#asideProducts img, #asidePricing img, #asideContact img{
     width: 200px;
 }
 
-/* Pricing page content */
-#mainGridContent{
-    display: grid;
-    grid-template-columns: auto 35% 20%;
-    grid-template-areas: 
-    "pageContent pageContent aside";
-}
-/* Pricing Table */
-#tableContent{
-    grid-area: pageContent;
-    padding: 20px;
-    background-color: #bdd7ee;
-}
-#tableContent tr td:first-child{
-    background-color: #FF0;
-}
-#tableContent tr:nth-child(even){
-    background-color: #CFF;
-}
-#tableContent tr:nth-child(odd){
-    background-color: #FFF;
-}
-
-/* Contact page content */
-/* Contact main content */
-#contactForm{
-    grid-area: pageContent;
-    padding: 20px;
-    background-color: #cecece;
-}
-#contactForm > section, #contactForm > form{
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-    padding: 20px;
-    border: 8px double #000000;
-    border-radius: 10px;
-}
-#contactForm > section > h1, #contactForm > form > h1{
-    font-size: x-large;
-}
-#contactForm > section > p{
-    padding-top: 16px;
-}
-#contactForm > section > p:last-child{
-    text-transform: uppercase;
-}
-#contactForm > form{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-}
-#contactForm > form > fieldset{
-    margin-top: 20px;
-    padding: 20px;
-    border: 2px dashed #000000;
-    border-radius: 10px;
-}
-#contactForm input, textarea{
-    align-self: center;
-    margin-left: 30px;
-    padding: 16px;
-    border: 2px solid #000000;
-    border-radius: 5px;
-}
-#contactForm > form > fieldset > fieldset{
-    padding: 8px 0;
-}
-.requiredField{
-    color: rgb(255, 0, 0);
-}
-#buttonSubmit{
-    width: 20em;
-    margin: 10px 10px 20px 10px;
-    padding: 10px;
-    background-color: #295197;
-    color: #ffffff;
-    border-radius: 10px;
-}
-
-/* Aside "TOP3 Products" for Pricing and Contact page */
-/* Aside */
-#asideTop3Products{
-    background-color: #aeaaaa;
-    grid-area: aside;
-    padding: 10px;
-}
-#asideTop3Products figure{
-    padding: 10px;
-    margin-top: 16px;
-    border: 2px double #000000;
-}
-#asideTop3Products img{
-    width: 200px;
-}
-
-/* Responsive */
+/* Responsive Tablet */
 @media (min-width: 720px) and (max-width: 1200px){
     #navbarMobile{
         display: none;
@@ -396,7 +415,6 @@ body{
     /* Product page content */
     /* Product Main Content */
     #innovationArticles{
-        display: grid;
         grid-template-columns: auto 50%;
         grid-template-areas: 
             "article1 article2"
@@ -408,24 +426,52 @@ body{
             "article6 article6"
             "article6 article6"
             ;
-        grid-gap: 10px;
     }
     #productArticle4{
         display: none;
     }
+   
+    /* Pricing page content */
+    #mainGridPricing{
+        grid-template-columns: auto;
+        grid-template-areas: 
+            "topContent"
+            "pageContent" 
+            "aside"
+            ;
+    }
+    /* Pricing Table */
+    #tableContent{
+        grid-area: pageContent;
+    }
+    
     /* Aside */
     #asideProducts{
-        display: grid;
         grid-template-columns: auto 50%;
         grid-template-areas: 
             "asideHeader asideHeader"
-            "product1 product2";
-        grid-gap: 10px;
+            "product1 product2"
+            ;
     }
-    #asideProduct3{
+    #asideProducts figure[id=asideProduct3]{
         display: none;
     }
+    #asidePricing{
+        grid-template-columns: auto 50%;
+        grid-template-areas: 
+            "asideHeader asideHeader"
+            "product2 product3"
+            ;
+    }
+    #asidePricing figure[id=asideProduct1]{
+        display: none;
+    }
+    /* Contacts */
+    .gridContent #asideProduct1{
+        display: block;
+    }
 }
+/* Responsive Mobile */
 @media (max-width: 720px){
     /* Navigation */
     #navbarDesktop{
@@ -508,7 +554,6 @@ body{
     /* Product page content */
     /* Product Main Content */
     #innovationArticles{
-        display: grid;
         grid-template-columns: auto;
         grid-template-areas: 
             "article5"
@@ -520,7 +565,6 @@ body{
     }
     /* Aside */
     #asideProducts{
-        display: grid;
         grid-template-columns: auto;
         grid-template-areas: 
             "asideHeader"
@@ -531,6 +575,36 @@ body{
         grid-gap: 10px;
     }
     #productArticle4, #productArticle6{
+        display: none;
+    }
+    /* Pricing page */
+    #mainGridPricing{
+        grid-template-columns: auto;
+        grid-template-areas: 
+            "pageContent" 
+            "aside"
+            ;
+    } 
+    #articleInnovation{
+        display: none;
+    }
+    /* Contacts page */
+    #mainGridContacts{
+        grid-template-columns: auto;
+        grid-template-areas:
+            "topContent" 
+            "pageContent" 
+            "aside"
+            ;
+    }
+    #visitorForm > form{
+        width: 80%;
+    }
+    /* Pricing Table */
+    #tableContent{
+        grid-area: pageContent;
+    }
+    #websiteLogo{
         display: none;
     }
 }
