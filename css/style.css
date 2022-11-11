@@ -129,7 +129,7 @@ body{
     border-style: double;
     border-color: #000000;
 }
-.articleSports h1{
+.articleSports h2{
     padding: 4px;
     text-transform: uppercase;
 }

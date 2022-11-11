@@ -1,50 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8"/>
+        <meta charset="utf-8">
         <title>Index page</title>
         <meta name = "keywords" 
             content="Inholland, haarlem, it, web markup, 
             assignment, index, home, front page"
-        />
+            >
         <meta name="description" 
             content="This is an index page"
-        />
+            >
         <meta name="author" 
             content="Ignas Montvydas"
-        />
+            >
         <link rel="stylesheet"
             type="text/css"
             href="css/style.css"
-        />
+            >
         
         <!-- Favicon -->
         <link rel="icon"
             type="image/x-icon"
             href="./img/favicon.ico"
-        />
+            >
         <link rel="icon" 
             type="image/png" 
             sizes="32x32" 
             href="/favicon-32x32.png"
-        />
+            >
         <link rel="icon" 
             type="image/png" 
             sizes="16x16" 
             href="/favicon-16x16.png"
-        />
+            >
 
         <!-- Using Google Fonts API for Notable font style -->
         <link rel="preconnect" 
             href="https://fonts.googleapis.com"
-        />
+            >
         <link rel="preconnect" 
             href="https://fonts.gstatic.com" 
             crossorigin
-        />
+            >
         <link rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Notable&display=swap" 
-        />
+            >
     </head>
     <body id="flexContainer">
 
@@ -52,14 +52,14 @@
         <header id="mainHeader">
 
             <!-- Website Header -->
-            <header id="websiteHeader">
+            <section id="websiteHeader">
                 <img id="websiteLogo" 
                     src="./img/Logo.png" 
                     title="Logo" alt="Logo"
-                />
+                    >
                 <h1>TechSport</h1>
                 <h2>Technology assisted Sport</h2>
-            </header>
+            </section>
             
             <!-- Navigation -->
             <nav id="navbarDesktop" class="hidden">
@@ -82,7 +82,7 @@
                 <input id="navMenuButton" 
                     class="navMenuButton"
                     type="checkbox"
-                    />
+                    >
                 <ul class="navList">
                     <li class="navbarMobileItem">
                         <a href="./product.html">Products</a>
@@ -96,25 +96,24 @@
                 </ul>
             </nav>
         </header>
-        <!-- Video Section -->
-        
 
         <!-- Website Content Section -->
         <section id="mainFlexContent">
             
             <!-- Video Section -->
             <section id="promotionalVideo">
-            <video autoplay loop muted>
-                <source type="video/mp4"
-                    src="./video/mp4/SportTechnologyVideoMP4.mp4"
-                />
-                <source type="video/ogg"
-                    src="./video/ogg/SportTechnologyVideoOGG.ogg"
-                />
-                <p>
-                    Browser does not support the video tag!
-                </p>
-            </video>
+                <h2>Short Video</h2>
+                <video autoplay loop muted>
+                    <source type="video/mp4"
+                        src="./video/mp4/SportTechnologyVideoMP4.mp4"
+                        >
+                    <source type="video/ogg"
+                        src="./video/ogg/SportTechnologyVideoOGG.ogg"
+                        >
+                    <p>
+                        Browser does not support the video tag!
+                    </p>
+                </video>
             </section>
             
             <!-- Articles -->
@@ -123,7 +122,7 @@
                 <!-- Article 1 -->
                 <article id="sport1" class="articleSports">
                     <header>
-                        <h1>Virtual Reality (VR)</h1>
+                        <h2>Virtual Reality (VR)</h2>
                     </header>
                     <figure>
                         <a href="https://getcardiogear.com/vr-treadmill/">
@@ -144,16 +143,19 @@
                         </span>
                     </p>
                     <footer>
-                        <em>
-                            <p>Copyright &#169; GetCardioGear.com</p>
-                        </em>
+                        <p>
+                            <em>
+                                Copyright &#169; GetCardioGear.com
+                            </em>
+                        </p>
+                        
                     </footer>
                 </article>
 
                 <!-- Article 2 -->
                 <article id="sport2" class="articleSports">
                     <header>
-                        <h1>Sensors and Wearables</h1>
+                        <h2>Sensors and Wearables</h2>
                     </header>
                     <figure>
                         <a href="https://komodotec.com/product/aio-sleeve-short-space-grey/">
@@ -174,16 +176,18 @@
                         </span>
                     </p>
                     <footer>
-                        <em>
-                            <p>Copyright &#169; Ohio University Blog</p>
-                        </em>
+                        <p>
+                            <em>
+                                Copyright &#169; Ohio University Blog
+                            </em>
+                        </p>
                     </footer>
                 </article>
 
                 <!-- Article 3 -->
                 <article id="sport3" class="articleSports">
                     <header>
-                        <h1>Hawk-Eye Green Technology</h1>
+                        <h2>Hawk-Eye Green Technology</h2>
                     </header>
                     <figure>
                         <a href="https://www.hawkeyeinnovations.com">
@@ -204,9 +208,11 @@
                         </span>
                     </p>
                     <footer>
-                        <em>
-                            <p>Copyright &#169; Hawk-Eye Innovations</p>
-                        </em>
+                        <p>
+                            <em>
+                                Copyright &#169; Hawk-Eye Innovations
+                            </em>
+                        </p>
                     </footer>
                 </article>
             </section>
@@ -244,14 +250,14 @@
         <!-- Website footer and Cookies -->
         <footer id="mainFooter">
             <section id="copyrightWebsite">
-                <p>
+                <h2>
                     Copyright &#169; 2022 Ignas Montvydas
-                </p>
+                </h2>
             </section>
             <section id="cookies">
-                <p>
+                <h2>
                     Cookie statement
-                </p>
+                </h2>
             </section>
         </footer>
     </body>
