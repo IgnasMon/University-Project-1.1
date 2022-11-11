@@ -42,32 +42,67 @@ body{
     letter-spacing: 8px;
 }
 
-#navbar{
-    position: sticky;
-    top: 0;
+#navbarDesktop, .navbarMobileItem{
     width: auto;
     padding: 20px;
     background-color: #19315b;
 }
-#navbar ul{
+#navbarDesktop ul{
     display: flex;
     justify-content: space-evenly;
-
 }
-.navbarItem{
+.navbarDesktopItem, .navbarMobileItem{
     list-style-type: none;
 }
-.navbarItem a{
+.navbarDesktopItem a, .navbarMobileItem a{
     padding: 20px 16px;
     color: #FFF;
     text-decoration: none;
 }
-.navbarItem a:hover{
+.navbarDesktopItem a:hover, .navbarMobileItem a:hover{
     background-color: #295197;
 }
-a:active{
-    color: red;
-   text-decoration: underline; 
+
+/* Hamburger menu */
+.navMenuButton{
+    display: none;
+}
+#navbarMobile{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #19315b;
+}
+#navbarMobile{
+    display: none;
+}
+#hamburger{
+    width: 30px;
+    padding: 20px;
+    margin: 20px;
+}
+.hamburgerIcon, .hamburgerIcon::before, .hamburgerIcon::after{
+    display: block;
+    position: relative;
+    height: 5px;
+    width: 20px;
+    background-color: #000000;
+}
+.hamburgerIcon::before{
+    top: -8px;
+    content: "";
+}
+.hamburgerIcon::after{
+    top: 4px;
+    content: "";
+}
+#navMenuButton:checked ~ .navList{
+    display: block;
+}
+.navList{
+    display: none;
 }
 
 /* Footer and Cookies */
