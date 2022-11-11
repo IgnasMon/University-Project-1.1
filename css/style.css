@@ -62,51 +62,13 @@ body{
 .navbarDesktopItem a:hover, .navbarMobileItem a:hover{
     background-color: #295197;
 }
-
-/* Hamburger menu */
-.navMenuButton{
-    display: none;
-}
 #navbarMobile{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background-color: #19315b;
-}
-#navbarMobile{
-    display: none;
-}
-#hamburger{
-    width: 30px;
-    padding: 20px;
-    margin: 20px;
-}
-.hamburgerIcon, .hamburgerIcon::before, .hamburgerIcon::after{
-    display: block;
-    position: relative;
-    height: 5px;
-    width: 20px;
-    background-color: #000000;
-}
-.hamburgerIcon::before{
-    top: -8px;
-    content: "";
-}
-.hamburgerIcon::after{
-    top: 4px;
-    content: "";
-}
-#navMenuButton:checked ~ .navList{
-    display: block;
-}
-.navList{
     display: none;
 }
 
 /* Footer and Cookies */
 #mainFooter, #mainGridFooter{
+    order: 10;
     padding: 20px;
     background-color: #d6dce4;
 }
@@ -139,11 +101,7 @@ body{
 }
 #mainFlexContent{
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    width: auto;
-    margin-left: 10%;
-    margin-right: 10%;
 }
 /* Video */
 #promotionalVideo{
@@ -158,45 +116,48 @@ body{
 #promotionalVideo video{
     width: 800px;
 }
+
 /* Articles */
 #contentArticles{
-    flex: 20%;
+    flex: 70%;
     display: flex;
     flex-wrap: wrap;
 }
-#contentArticles article{
+.articleSports{
     padding: 16px;
-}
-#contentArticles h1{
-    padding: 4px;
-    text-transform: uppercase;
-}
-#contentArticles p{
-    line-height: 24px;
-    text-indent: 20px;
-}
-#contentArticles figure{
-    clear: both;
-    float: right;
-}
-#contentArticles img{
-    height: 200px;
-}
-#contentArticles article{
     border-width: 10px;
     border-style: double;
     border-color: #000000;
+}
+.articleSports h1{
+    padding: 4px;
+    text-transform: uppercase;
+}
+.articleSports figure{
+    clear: both;
+    float: right;
+}
+.articleSports img{
+    height: 200px;
+}
+.articleSports p{
+    word-spacing: 4px;
+    line-height: 24px;
+    text-indent: 20px;
+}
+#sport1{
     background-color: #e2efda;
 }
-#contentArticles article:nth-child(even){
+#sport2{
     background-color: #c6e0b4;
 }
-#contentArticles article p{
-    word-spacing: 4px;
+#sport3{
+    background-color: #a9d08e;
 }
+
 /* Aside */
 #asideTrends{
-    flex: 300px;
+    flex: 20%;
     flex-grow: 0;
     flex-shrink: 0;
     padding: 20px;
@@ -229,11 +190,13 @@ body{
         ;
     grid-gap: 10px;
 }
-#innovationArticles article{
-    padding: 20px;
-    border: 2px double #000000;
+.productArticle{
+    padding: 16px;
+    border-width: 10px;
+    border-style: double;
+    border-color: #000000;
 }
-#innovationArticles article p::first-letter{
+#articleSports p::first-letter{
     font-size: 30px;
     font-weight: 400;
     letter-spacing: 2px;
@@ -271,6 +234,8 @@ body{
         "asideHeader asideHeader asideHeader"
         "product1 product2 product3";
     grid-gap: 10px;
+    background-color: #ff9d9d;
+    padding: 10px;
 }
 #asideProducts figure{
     padding: 10px;
@@ -389,4 +354,183 @@ body{
 }
 #asideTop3Products img{
     width: 200px;
+}
+
+/* Responsive */
+@media (min-width: 720px) and (max-width: 1200px){
+    #navbarMobile{
+        display: none;
+    }
+    /* Index */
+    /* Articles */
+    #sport1{
+        order: 3;
+    }
+    #sport2{
+        order: 2;
+    }
+    #sport3{
+        order: 1;
+    }
+    .articleSports figure{
+        clear: both;
+        float: left;
+    }
+
+    #contentArticles{
+        flex: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    /* Aside */
+    #asideTrends{
+        flex: 100%;
+        order: 1;
+    }
+    #promotionalVideo{
+        order: 2;
+    }
+    #contentArticles{
+        order: 3;
+    }
+    /* Product page content */
+    /* Product Main Content */
+    #innovationArticles{
+        display: grid;
+        grid-template-columns: auto 50%;
+        grid-template-areas: 
+            "article1 article2"
+            "article1 article2"
+            "article3 article2"
+            "article3 article5"
+            "article3 article5"
+            "article3 article5"
+            "article6 article6"
+            "article6 article6"
+            ;
+        grid-gap: 10px;
+    }
+    #productArticle4{
+        display: none;
+    }
+    /* Aside */
+    #asideProducts{
+        display: grid;
+        grid-template-columns: auto 50%;
+        grid-template-areas: 
+            "asideHeader asideHeader"
+            "product1 product2";
+        grid-gap: 10px;
+    }
+    #asideProduct3{
+        display: none;
+    }
+}
+@media (max-width: 720px){
+    /* Navigation */
+    #navbarDesktop{
+        display: none;
+    }
+    /* Hamburger menu */
+    .navMenuButton{
+        display: none;
+    }
+    #navbarMobile{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #19315b;
+    }
+    #hamburger{
+        width: 30px;
+        padding: 20px;
+        margin: 20px;
+    }
+    .hamburgerIcon, .hamburgerIcon::before, .hamburgerIcon::after{
+        display: block;
+        position: relative;
+        height: 5px;
+        width: 20px;
+        background-color: #ffffff;
+    }
+    .hamburgerIcon::before{
+        top: -8px;
+        content: "";
+    }
+    .hamburgerIcon::after{
+        top: 4px;
+        content: "";
+    }
+    #navMenuButton:checked ~ .navList{
+        display: block;
+    }
+    .navList{
+        display: none;
+    }
+
+    /* Index Page */
+    #promotionalVideo{
+        display: none;
+    }
+    /* Index */
+    .articleSports{
+        display: flex;
+        flex-direction: column;
+    }
+    .articleSports p{
+        order: 1;
+    }
+    .articleSports figure{
+        float: none;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        order: 2;
+    }
+    #sport1{
+        order: 3;
+    }
+    #sport2{
+        order: 2;
+    }
+    #sport3{
+        order: 1;
+    }
+    
+    /* Aside */
+    #asideTrends{
+        flex: 100%;
+        order: -1;
+    }
+
+    /* Product page content */
+    /* Product Main Content */
+    #innovationArticles{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas: 
+            "article5"
+            "article3"
+            "article2"
+            "article1"
+            ;
+        grid-gap: 10px;
+    }
+    /* Aside */
+    #asideProducts{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas: 
+            "asideHeader"
+            "product1"
+            "product2"
+            "product3"
+            ;
+        grid-gap: 10px;
+    }
+    #productArticle4, #productArticle6{
+        display: none;
+    }
 }
