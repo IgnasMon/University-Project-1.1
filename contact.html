@@ -113,7 +113,7 @@
             <section id="visitorForm">
                 
                 <form>
-                    <h1>Contact form</h1>
+                    <h2>Contact form</h2>
     
                     <!-- Name and Email -->
                     <fieldset>
@@ -124,7 +124,12 @@
                                     <span class="requiredField">*</span>
                                 </strong>
                             </label>
-                            <input type="text" name="name" placeholder="Name Lastname" required/>
+                            <input id="name" 
+                                type="text" 
+                                name="name" 
+                                placeholder="Name Lastname" 
+                                required
+                                >
                         </fieldset>
                         <fieldset>
                             <label for="email">
@@ -132,7 +137,12 @@
                                     <span class="requiredField">*</span>
                                 </strong>
                             </label>
-                            <input type="email" name="email" placeholder="email@email.com" required>
+                            <input id="email" 
+                                type="email" 
+                                name="email" 
+                                placeholder="email@email.com" 
+                                required
+                                >
                         </fieldset>
                     </fieldset>
     
@@ -144,7 +154,12 @@
                                 <span class="requiredField">*</span>
                             </strong>
                         </label>
-                        <textarea name="message" rows="5" cols="20" required>
+                        <textarea id="message" 
+                            name="message" 
+                            rows="5" 
+                            cols="20" 
+                            required
+                            >
                         </textarea>
                     </fieldset>
                     
@@ -154,9 +169,7 @@
 
             <!-- Aside Section -->
             <aside id="asideContact">
-                <h1>
-                    Top products
-                </h1>
+                <h2>Top products</h2>
                 <figure id="asideProduct1">
                     <a href="https://www.inholland.nl/">
                         <img src="./img/product/horse-therapy-equipment.png">

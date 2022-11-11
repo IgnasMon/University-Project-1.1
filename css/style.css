@@ -29,7 +29,7 @@ body{
     width: 180px;
     height: auto;
 }
-#websiteHeader h1,h2{
+#websiteHeader > h1, #websiteHeader > h2{
     font-family: 'Notable', sans-serif;
     color: #ffffff;
 }
@@ -107,11 +107,15 @@ body{
 #promotionalVideo{
     flex: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     border-width: 10px;
     border-style: double;
     border-color: #000000;
     background-color: #f8cbad;
+}
+#promotionalVideo h2{
+    padding: 10px;
 }
 #promotionalVideo video{
     width: 800px;
