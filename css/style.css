@@ -442,8 +442,12 @@ body{
 .hidden{
     display: none;
 }
+
 /* Responsive Tablet */
 @media (min-width: 720px) and (max-width: 1200px){
+    #navbarDesktop{
+        display: show;
+    }
     #navbarMobile{
         display: none;
     }
@@ -544,6 +548,10 @@ body{
     #navbarDesktop{
         display: none;
     }
+    #navbarMobile{
+        display: show;
+    }
+
     /* Hamburger menu */
     .navMenuButton{
         display: none;
