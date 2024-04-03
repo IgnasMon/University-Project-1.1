@@ -15,9 +15,9 @@
 
 ### GitHub
 
-- <b>URL website:</b> [Project Preview](https://ignasmon.github.io).
+- <b>URL website:</b> [Project Preview](https://ignasmon.github.io/University-Project-1.1).
 
-- <b>URL repository:</b> [Project Repository](https://github.com/IgnasMon/IgnasMon.github.io).
+- <b>URL repository:</b> [Project Repository](https://github.com/IgnasMon/University-Project-1.1).
 
 ### Trouble Shooting
 
