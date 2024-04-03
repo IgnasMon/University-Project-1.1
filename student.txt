@@ -1,5 +1,5 @@
 Student name: Ignas Montvydas
 Student number: 706806
 Student class: IT1C
-URL student GitHub website: https://ignasmon.github.io
-URL student GitHub repository: https://github.com/IgnasMon/IgnasMon.github.io
+URL student GitHub website: https://ignasmon.github.io/University-Project-1.1/
+URL student GitHub repository: https://github.com/IgnasMon/University-Project-1.1
